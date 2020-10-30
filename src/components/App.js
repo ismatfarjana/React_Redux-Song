@@ -1,11 +1,14 @@
 import React from "react";
 import "../App.css";
 import { selectSong } from "../actions";
+import SongList from "./SongList";
 
 const App = () => {
   return (
     <div>
-      <div>App</div>
+      <div>
+        <SongList />
+      </div>
     </div>
   );
 };
