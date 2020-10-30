@@ -11,6 +11,7 @@ html {
   justify-content: space-between;
   border-top: 1px solid rgba(70, 68, 68, 0.178);
   padding: 3px 10px;
+  width: 50vw;
 }
 .button {
   background-color: rgba(45, 111, 235, 0.918);
@@ -21,4 +22,7 @@ html {
   font-size: 20px;
   border: 0;
   cursor: pointer;
+}
+.button:hover {
+  background-color: rgba(27, 84, 190, 0.986);
 }
