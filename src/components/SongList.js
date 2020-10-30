@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { selectSong } from "../actions";
 //just to get all the songs in to the song list and console.log .. to do so,-> create connect component here -> pass some configeration that gets back to provider and tell it that we ned the entire list of song here
 class SongList extends Component {
   renderList() {
@@ -7,7 +8,12 @@ class SongList extends Component {
       return (
         <div className="item" key={song.title}>
           <div className="floted_content">
-            <button className="button">Select Song</button>
+            <button
+              className="button"
+              onClick={() => this.props.selectSong(song)}
+            >
+              Select Song
+            </button>
           </div>
 
           <div className="content">{song.title}</div>
@@ -16,7 +22,7 @@ class SongList extends Component {
     });
   }
   render() {
-    // console.log(this.props);
+    console.log(this.props);
     return (
       <div>
         <div>{this.renderList()}</div>
@@ -29,5 +35,5 @@ const mapStateToProps = state => {
   return { songs: state.songs };
 };
 
-export default connect(mapStateToProps)(SongList);
+export default connect(mapStateToProps, { selectSong })(SongList);
 //connect() function is returning the function invoked by SongList
