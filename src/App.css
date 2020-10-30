@@ -5,3 +5,20 @@ html {
   text-align: center;
   font-size: calc(10px + 2vmin);
 }
+.item {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  border-top: 1px solid rgba(70, 68, 68, 0.178);
+  padding: 3px 10px;
+}
+.button {
+  background-color: rgba(45, 111, 235, 0.918);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 10px;
+  height: 40px;
+  font-size: 20px;
+  border: 0;
+  cursor: pointer;
+}
